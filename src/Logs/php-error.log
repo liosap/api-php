@@ -1,0 +1,67 @@
+[11-Dec-2022 09:18:51 America/Argentina/Cordoba] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read any of the environment file(s) at [C:\xampp\htdocs\api-php\.env]. in C:\xampp\htdocs\api-php\vendor\vlucas\phpdotenv\src\Store\FileStore.php:68
+Stack trace:
+#0 C:\xampp\htdocs\api-php\vendor\vlucas\phpdotenv\src\Dotenv.php(222): Dotenv\Store\FileStore->read()
+#1 C:\xampp\htdocs\api-php\src\DB\dataDB.php(10): Dotenv\Dotenv->load()
+#2 C:\xampp\htdocs\api-php\src\DB\ConnectionDB.php(7): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\api-php\vendor\composer\ClassLoader.php(571): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\api-php\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\api-php\src\Models\UserModel.php(10): Composer\Autoload\ClassLoader->loadClass('App\\DB\\Connecti...')
+#6 C:\xampp\htdocs\api-php\vendor\composer\ClassLoader.php(571): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\api-php\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\api-php\src\Controllers\UserController.php(24): Composer\Autoload\ClassLoader->loadClass('App\\Models\\User...')
+#9 C:\xampp\htdocs\api-php\src\Routes\auth.php(17): App\Controllers\UserController->getLogin('auth/sdp@gmail....')
+#10 C:\xampp\htdocs\api-php\index.php(27): require('C:\\xampp\\htdocs...')
+#11 {main}
+  thrown in C:\xampp\htdocs\api-php\vendor\vlucas\phpdotenv\src\Store\FileStore.php on line 68
+[11-Dec-2022 09:26:10 America/Argentina/Cordoba] Campos de la DB vacios
+[11-Dec-2022 09:29:24 America/Argentina/Cordoba] Campos de la DB vacios
+[11-Dec-2022 09:59:11 America/Argentina/Cordoba] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Firebase\JWT\JWT::encode(), 2 passed in C:\xampp\htdocs\api-php\src\Config\Security.php on line 47 and at least 3 expected in C:\xampp\htdocs\api-php\vendor\firebase\php-jwt\src\JWT.php:183
+Stack trace:
+#0 C:\xampp\htdocs\api-php\src\Config\Security.php(47): Firebase\JWT\JWT::encode(Array, 'secreto')
+#1 C:\xampp\htdocs\api-php\src\Models\UserModel.php(87): App\Config\Security::createTokenJwt('secreto', Array)
+#2 C:\xampp\htdocs\api-php\src\Controllers\UserController.php(26): App\Models\UserModel::login()
+#3 C:\xampp\htdocs\api-php\src\Routes\auth.php(17): App\Controllers\UserController->getLogin('auth/liosap@gma...')
+#4 C:\xampp\htdocs\api-php\index.php(27): require('C:\\xampp\\htdocs...')
+#5 {main}
+  thrown in C:\xampp\htdocs\api-php\vendor\firebase\php-jwt\src\JWT.php on line 183
+[11-Dec-2022 10:35:11 America/Argentina/Cordoba] PHP Warning:  Undefined array key 2 in C:\xampp\htdocs\api-php\src\Routes\auth.php on line 17
+[11-Dec-2022 10:35:37 America/Argentina/Cordoba] PHP Warning:  Undefined array key 2 in C:\xampp\htdocs\api-php\src\Routes\auth.php on line 17
+[11-Dec-2022 10:35:49 America/Argentina/Cordoba] PHP Warning:  Undefined array key 2 in C:\xampp\htdocs\api-php\src\Routes\auth.php on line 17
+[11-Dec-2022 10:38:51 America/Argentina/Cordoba] PHP Warning:  Undefined array key 2 in C:\xampp\htdocs\api-php\src\Routes\auth.php on line 17
+[11-Dec-2022 10:43:07 America/Argentina/Cordoba] PHP Warning:  Undefined array key 2 in C:\xampp\htdocs\api-php\src\Routes\auth.php on line 17
+[11-Dec-2022 10:43:13 America/Argentina/Cordoba] PHP Warning:  Undefined array key 2 in C:\xampp\htdocs\api-php\src\Routes\auth.php on line 17
+[11-Dec-2022 18:46:18 America/Argentina/Cordoba] Token invalido o expiroUnexpectedValueException: "kid" empty, unable to lookup correct key in C:\xampp\htdocs\api-php\vendor\firebase\php-jwt\src\JWT.php:434
+Stack trace:
+#0 C:\xampp\htdocs\api-php\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('secreto', NULL)
+#1 C:\xampp\htdocs\api-php\src\Config\Security.php(60): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1Q...', 'secreto', Array)
+#2 C:\xampp\htdocs\api-php\src\Controllers\UserController.php(35): App\Config\Security::validateTokenJwt('secreto')
+#3 C:\xampp\htdocs\api-php\src\Routes\user.php(13): App\Controllers\UserController->getAll('user/')
+#4 C:\xampp\htdocs\api-php\index.php(27): require('C:\\xampp\\htdocs...')
+#5 {main}
+[11-Dec-2022 19:11:58 America/Argentina/Cordoba] Token invalido o expiroUnexpectedValueException: "kid" empty, unable to lookup correct key in C:\xampp\htdocs\api-php\vendor\firebase\php-jwt\src\JWT.php:434
+Stack trace:
+#0 C:\xampp\htdocs\api-php\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('secreto', NULL)
+#1 C:\xampp\htdocs\api-php\src\Config\Security.php(60): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1Q...', 'secreto', Array)
+#2 C:\xampp\htdocs\api-php\src\Controllers\UserController.php(35): App\Config\Security::validateTokenJwt('secreto')
+#3 C:\xampp\htdocs\api-php\src\Routes\user.php(13): App\Controllers\UserController->getAll('user/')
+#4 C:\xampp\htdocs\api-php\index.php(27): require('C:\\xampp\\htdocs...')
+#5 {main}
+[11-Dec-2022 19:37:11 America/Argentina/Cordoba] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\api-php\src\Routes\user.php on line 14
+[11-Dec-2022 19:37:45 America/Argentina/Cordoba] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\api-php\src\Routes\user.php on line 14
+[11-Dec-2022 19:47:47 America/Argentina/Cordoba] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\api-php\src\Routes\user.php on line 14
+[11-Dec-2022 19:48:02 America/Argentina/Cordoba] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\api-php\src\Routes\user.php on line 14
+[11-Dec-2022 19:51:37 America/Argentina/Cordoba] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\api-php\src\Routes\user.php on line 14
+[11-Dec-2022 19:51:50 America/Argentina/Cordoba] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\api-php\src\Routes\user.php on line 14
+[11-Dec-2022 19:52:10 America/Argentina/Cordoba] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\api-php\src\Routes\user.php on line 14
+[11-Dec-2022 19:53:57 America/Argentina/Cordoba] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\api-php\src\Routes\user.php on line 14
+[11-Dec-2022 19:54:04 America/Argentina/Cordoba] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\api-php\src\Routes\user.php on line 14
+[11-Dec-2022 19:57:50 America/Argentina/Cordoba] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\api-php\src\Routes\user.php on line 14
+[11-Dec-2022 19:57:56 America/Argentina/Cordoba] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\api-php\src\Routes\user.php on line 14
+[11-Dec-2022 19:58:10 America/Argentina/Cordoba] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\api-php\src\Routes\user.php on line 14
+[11-Dec-2022 19:58:17 America/Argentina/Cordoba] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\api-php\src\Routes\user.php on line 14
+[11-Dec-2022 19:58:22 America/Argentina/Cordoba] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\api-php\src\Routes\user.php on line 14
+[11-Dec-2022 19:59:23 America/Argentina/Cordoba] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\api-php\src\Routes\user.php on line 14
+[11-Dec-2022 19:59:39 America/Argentina/Cordoba] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\api-php\src\Routes\user.php on line 14
+[11-Dec-2022 19:59:52 America/Argentina/Cordoba] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\api-php\src\Routes\user.php on line 14
+[11-Dec-2022 20:00:01 America/Argentina/Cordoba] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\api-php\src\Routes\user.php on line 14
+[11-Dec-2022 20:00:07 America/Argentina/Cordoba] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\api-php\src\Routes\user.php on line 14

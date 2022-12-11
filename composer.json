@@ -1,0 +1,17 @@
+{
+  "require": {
+    "vlucas/phpdotenv": "^5.5",
+    "firebase/php-jwt": "^6.3",
+    "samayo/bulletproof": "^5.0",
+    "rakit/validation": "^1.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true
+  }
+   
+}
